@@ -120,6 +120,24 @@ struct Exporter
 		all_children = #()
 		for obj in obj.children do
 		(
+			s1 = obj.name
+			s2 = " //"
+			s3 = "_"
+			s4 = substituteString s1 s2 s3
+			s5 = " /"
+			s6 = "_"
+			s7 = substituteString s4 s5 s6
+			s8 = "//"
+			s9 = "_"
+			s10 = substituteString s7 s8 s9
+			s11 = " /"
+			s12 = "_"
+			s13 = substituteString s10 s11 s12
+			s14 = " "
+			s15 = "-"
+			s16 = substituteString s13 s14 s15
+			obj.name = s16
+			
 			append all_children obj
 			all_children += (getAllChildren obj)
 		)
